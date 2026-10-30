@@ -12,7 +12,7 @@ export const tasksApi = {
         search: filters.search || undefined,
       },
     });
-    tasks.data;
+    return tasks.data;
   },
   create: async (input: TaskInput) => {
     const result = await api.post<Task>("/tasks", input);
